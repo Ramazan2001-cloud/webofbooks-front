@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    background-color: #8fb4cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px;
+    &__menu {
+        display: flex;
+        align-items: center;
+        background: none;
+    }
+    &__item {
+    }
+}

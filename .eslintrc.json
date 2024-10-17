@@ -1,9 +1,96 @@
 {
-	"extends": ["next/core-web-vitals", "next/typescript"],
-	"parser": "@typescript-eslint/parser",
-	"plugins": ["@typescript-eslint"],
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "next/core-web-vitals",
+        "next/typescript",
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+    "ignorePatterns": ["dist"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
     "rules": {
-      	"semi": ["error", "always"],
-		"@typescript-eslint/no-explicit-any": "error"
+        "prettier/prettier": ["error", { "endOfLine": "auto" }],
+        "comma-dangle": [
+            "warn",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "never"
+            }
+        ],
+        "semi": ["error", "always"],
+        "no-tabs": "off",
+        "no-var": "error",
+        "@typescript-eslint/indent": "off",
+        // Усложняет чтение кода - выключаем
+        "prefer-destructuring": "off",
+        // Отступы в виде табов: требуем всегда
+        "indent": ["warn", 4, { "MemberExpression": 1 }],
+        "@typescript-eslint/no-invalid-void-type": "off",
+        // Отключает требование импортировать React при использовании JSX.
+        "react/react-in-jsx-scope": 0,
+        // Убираем требование делать return во всех результатах функции, чтобы не браковались forEach колбэки
+        "consistent-return": "off",
+        //Это правило отключено (установлено в 0), что означает, что ESLint не будет проверять на ошибки в использовании обещаний (promises). Обычно это правило проверяет н
+        "@typescript-eslint/no-misused-promises": 0,
+        // Это также отключенное правило (установлено в 0), что означает, что ESLint не будет предупреждать о потенциальных проблемах с обещаниями, которые могут быть незамеченными и привести к нежелательному поведению. Например, это может произойти, когда обещание не возвращается или не обрабатывается.
+        "@typescript-eslint/no-floating-promises": 0,
+        // Запрет использования пустых блочных операторов: требуем, но игнорируем путые catch
+        "no-empty": [
+            "warn",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        //Требуем одинарные кавычки
+        "quotes": ["warn", "single"],
+        // Отключает предупреждения при распространении пропсов в JSX.
+        "react/jsx-props-no-spreading": "off",
+        // Отключает проверку использования переменных и функций до их определения.
+        "no-use-before-define": [0],
+        // Отключает требование именования безымянных компонентов в React.
+        "react/display-name": 0,
+        // Отключает предупреждение о использовании оператора require в TypeScript файле. require используется для динамической загрузки модулей в CommonJS.
+        "@typescript-eslint/no-var-requires": 0,
+        // Устанавливает уровень предупреждения для неиспользуемых переменных в TypeScript файле. При этом игнорируются аргументы функций, начинающиеся с символа подчеркивания.
+        "@typescript-eslint/no-unused-vars": [
+            1,
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        //  Показывает предупреждение при использовании console.
+        "no-console": 1,
+        //  Показывает предпочтение использования const для переменных, которые не переопределяются.
+        "prefer-const": 1,
+        // Показывает предпочтение использования оператора расширения ... вместо apply.
+        "prefer-spread": 1,
+        // Показывает ошибку при использовании неиспользуемых выражений, разрешая короткое замыкание и тернарный оператор.
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowShortCircuit": true,
+                "allowTernary": true
+            }
+        ],
+        // Это правило предотвращает использование присваивания внутри оператора возврата (return). Когда это правило выключено ("off"), это означает, что ESLint не будет выдавать предупреждения при обнаружении таких конструкций. Пример нежелательного использования: return someVariable = someValue;.
+        "no-return-assign": "off",
+        // Это правило предотвращает использование символов подчеркивания в именах переменных, кроме случаев, когда эти переменные являются частью системы или API. Когда это правило выключено ("off"), это означает, что ESLint не будет выдавать предупреждения при обнаружении символов подчеркивания в именах переменных.
+        "no-underscore-dangle": "off",
+        // Запрещает перезапись параметров функций, кроме пропсов, и игнорирует изменения свойств объекта state.
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": ["state"]
+            }
+        ]
     }
 }
