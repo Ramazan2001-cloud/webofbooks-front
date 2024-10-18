@@ -4,13 +4,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 100px;
     padding: 10px;
+    &__user {
+        color: #000000;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 15px;
+    }
     &__menu {
         display: flex;
         align-items: center;
         background: none;
+        gap: 20px;
+    }
+    &__button {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
     }
     &__item {
+
     }
 }
