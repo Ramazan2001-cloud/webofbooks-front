@@ -1,9 +1,51 @@
 .container {
-    display: flex;
-    width: 100%;
+    max-width: 1270px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
 body {
     font-size: 16px;
+    background: rgb(235, 234, 234);
+}
+
+h1 {
+    font-size: 50px !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+}
+
+h2 {
+    font-size: 25px !important;
+    font-weight: 500 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Для WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+    background: #d3d3d3; /* Серый фон полосы прокрутки */
+}
+
+::-webkit-scrollbar-thumb {
+    background: yellow; /* Желтый цвет ползунка */
+    border-radius: 10px; /* Закругление углов ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: yellow; /* Цвет ползунка при наведении (светлее желтого) */
+}
+
+/* Убираем стрелки */
+::-webkit-scrollbar-button {
+    display: none; /* Скрыть стрелки */
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin; /* Узкая полоса прокрутки */
+    scrollbar-color: yellow #ebebeb; /* Желтый ползунок и серый фон */
 }
