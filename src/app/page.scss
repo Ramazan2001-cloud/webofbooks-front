@@ -4,6 +4,7 @@
         width: 100%;
         height: 90vh;
         &-two {
+            position: relative;
             height: 70vh;
         }
     }
@@ -17,9 +18,12 @@
         left: 0;
     }
     &__image-two {
+        position: absolute;
         display: block;
         width: 100%;
         height: 100%;
+        top: 0;
+        left: 0;
         object-fit: cover;
     }
     &__backdrop {
@@ -70,11 +74,12 @@
         object-fit: cover;
     }
     &__article-text {
-        max-width: 740px;
+        max-width: 500px;
         padding: 0 10px;
         margin: 0 auto;
     }
     &__list {
+        max-width: 500px;
         text-align: left;
     }
     &__item {
@@ -82,11 +87,17 @@
         font-size: 18px;
         line-height: 20px;
     }
-}
-
-.border-bottom-rr {
-    border-bottom-right-radius: 20px;
-}
-.border-top-lr {
-    border-top-left-radius: 20px;
+    &__quote {
+        position: relative;
+        text-align: center;
+        color: #ffffff;
+        z-index: 2;
+    }
+    &__quote-text {
+        max-width: 640px;
+        line-height: 30px;
+    }
+    &__author {
+        font-size: 20px;
+    }
 }

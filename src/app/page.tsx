@@ -4,6 +4,7 @@ import Image from 'next/image';
 import BooksImageOne from '@/assets/images/books-image-one.jpg';
 import BooksImageTwo from '@/assets/images/books-image-two.jpg';
 import BooksImageThree from '@/assets/images/books-image-three.jpg';
+import BooksImagePeople from '@/assets/images/books-image-people.jpg';
 
 export default function Home() {
     return (
@@ -34,7 +35,7 @@ export default function Home() {
                     <Image
                         src={BooksImageTwo}
                         alt="Картинка книг"
-                        className="main__article-image border-bottom-rr"
+                        className="main__article-image"
                     />
                     <div className="main__article-text">
                         <h2>Что мы хотим ?</h2>
@@ -78,18 +79,28 @@ export default function Home() {
                         </ul>
                     </div>
                     <Image
-                        src={BooksImageTwo}
+                        src={BooksImagePeople}
                         alt="Картинка книг"
-                        className="main__article-image border-top-lr"
+                        className="main__article-image"
                     />
                 </article>
             </section>
-            <section className="main__section-two">
+            <section className="main__section-two flex align-center justify-center">
+                <blockquote className="main__quote">
+                    <h2 className="main__quote-text">
+                        «Счастье не в том, чтобы делать всегда, что хочешь, а в
+                        том, чтобы всегда хотеть того, что делаешь».
+                    </h2>
+                    <figcaption className="main__author">
+                        — Лев Толстой
+                    </figcaption>
+                </blockquote>
                 <Image
                     src={BooksImageThree}
                     alt="Картинка книг"
                     className="main__image-two"
                 />
+                <div className="main__backdrop"></div>
             </section>
         </main>
     );
