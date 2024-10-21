@@ -9,6 +9,7 @@ import BookItem from './BookItem/BookItem';
 
 const Books = () => {
     return (
+        // todo переделать 
         <main className="books">
             <section className="books__section">
                 <Image
