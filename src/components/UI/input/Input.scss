@@ -1,0 +1,12 @@
+.input {
+    max-width: 700px;
+    height: 60px;
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+    font-size: 20px;
+    border: none;
+    &::placeholder {
+        font-size: 20px;
+    }
+}

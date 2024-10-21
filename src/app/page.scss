@@ -2,7 +2,7 @@
     &__section {
         position: relative;
         width: 100%;
-        height: 90vh;
+        height: 80vh;
         &-two {
             position: relative;
             height: 70vh;
@@ -25,14 +25,6 @@
         top: 0;
         left: 0;
         object-fit: cover;
-    }
-    &__backdrop {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: #00000082;
     }
     &__content {
         position: relative;

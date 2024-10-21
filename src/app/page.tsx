@@ -28,7 +28,7 @@ export default function Home() {
                     alt="Картинка книг"
                     className="main__image-one"
                 />
-                <div className="main__backdrop"></div>
+                <div className="backdrop"></div>
             </section>
             <section className="main__section-two">
                 <article className="main__article">
@@ -100,7 +100,7 @@ export default function Home() {
                     alt="Картинка книг"
                     className="main__image-two"
                 />
-                <div className="main__backdrop"></div>
+                <div className="backdrop"></div>
             </section>
         </main>
     );
